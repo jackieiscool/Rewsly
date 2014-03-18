@@ -1,3 +1,9 @@
 <h1><%= @story.title %></h1>
 <p><%= link_to @story.link, @story.link %>
 <p><%= link_to "Back to home page", root_path %></p>
+<p><%= @story.user.email %></p>
+<p><% @story.comments.each do |comment| %>
+    <%= comment.text %>
+  <% end %>
+</p>
+
