@@ -11,12 +11,15 @@
 
 <div id="stories">
   <ul>
+  <% @stories.each do |story| %>
     <li>
       <h3><%= link_to story.title, story.link %></h3>
       <p>
         <b>Upvotes</b>: <%= story.upvotes %> ||
         <b>Category</b>: <%= story.category %> ||
+        <%= link_to "Delete", story_path(story.id), method: 'delete' %>
       </p>
     </li>
+  <% end %>
   </ul>
 </div>

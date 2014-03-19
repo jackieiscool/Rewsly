@@ -38,6 +38,7 @@ end
 
 # devise
 gem 'devise', '~>3.0.0rc'
+gem 'pry-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
